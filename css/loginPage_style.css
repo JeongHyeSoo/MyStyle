@@ -1,0 +1,13 @@
+
+#LoginPadding{
+    margin: 30%;
+}
+
+#LoginBox {
+    padding: 5%;
+}
+
+#Copyright {
+    padding: 5%;
+    background-color: gray;
+}

@@ -1,0 +1,135 @@
+#banner{
+    z-index:1;
+}
+#LoginMypageSearchIcon {
+    z-index: 3;
+    position: absolute;
+    right:0;
+}
+a.MyPage{
+    color:snow;
+}
+a.Login{
+    color:snow;
+}
+a {
+    color: dimgrey;
+}
+a:hover {
+        color: lightcoral;
+        text-decoration:none;
+}
+#Login {
+    float: right;
+    font-size: 16px;
+    margin-top: 15px;
+    font-family: "돋음";
+    color: white;
+    font-weight: 600;
+}
+#MyPage {
+    float: right;
+    font-size: 16px;
+    margin-top: 15px;
+    font-family: "돋음";
+    color: white;
+    font-weight: 600;
+}
+#SearchIcon {
+    float: right;
+    margin: 5px;
+    height: 40px;
+}        
+#SearchIconImg {
+    height: 40px;
+}
+#logo {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    margin:10px;
+}
+footer{
+    padding-top:3%;
+    padding-bottom:3%;
+    background-color: grey;
+    margin-top:5%;
+}
+#bannerImg {
+    padding: 0px;
+}
+h3{
+    font-family:"돋음";
+    font-weight:bold;
+}
+#BestCodyTitle {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: dimgrey;
+}
+#DailyCodyTitle {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: dimgrey;
+}
+
+#NotifyAddtoalbumHeartIcons{
+    position:absolute;
+    bottom:10%;
+    z-index:5;
+}
+
+#LookaheadImg {
+    z-index: 3;
+    position:relative;
+}        
+
+#LookaheadTitle {
+
+}
+
+.screen {
+    position:relative;
+    overflow:hidden;
+}
+
+.LookaheadTitle {
+    position: absolute;
+    bottom:150%;
+    text-align: center;
+    z-index: 5;
+    margin: 20px;
+    transition:all .35s;
+}
+
+.NotifyAddtoalbumHeartIcons {
+    position: absolute;
+    top: 150%;
+    z-index: 5;
+    width: 100%;
+    transition: all .35s;
+}
+
+a:hover .LookaheadTitle{
+    bottom:80%;
+    color:white;
+}
+a:hover .NotifyAddtoalbumHeartIcons {
+    top: 80%;
+}
+.screen::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 4;
+    opacity: 0;
+    transition: all .35s;
+}
+a:hover .screen::after{
+    opacity:1;
+}
