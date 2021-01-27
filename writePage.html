@@ -94,13 +94,13 @@
                                     list.removeChild(list.childNodes[0]);
                                     //새로 업로드 한 사진 image_container의 하위 요소에 추가
                                     var reader = new FileReader();
+                                    reader.readAsDataURL(event.target.files[0]);
                                     reader.onload = function(event) {
-                                    var img = document.createElement("img");
-                                    img.id="newImg"
-                                    img.setAttribute("src", event.target.result);
-                                    document.querySelector("div#image_container").appendChild(img);
-                                };
-                                reader.readAsDataURL(event.target.files[0]);
+                                        var img = document.createElement("img");
+                                        img.id="newImg"
+                                        img.setAttribute("src", event.target.result);
+                                        document.querySelector("div#image_container").appendChild(img);
+                                    }
                                 }
                             </script>
 
@@ -151,7 +151,7 @@
                                     </table>
                                 </div>
                                 <div>
-                                    <textarea placeholder=" 글을 작성해 주세요" name="글" id="comment" ></textarea>
+                                    <textarea placeholder=" 글을 작성해 주세요" name="comment" id="comment" ></textarea>
                                 </div>
                             </div>
                         </div>
@@ -171,10 +171,6 @@
                                     }
                                 </script>
                                 상품 상세 정보 &nbsp<input type="button"  class="inputProductButton" onclick="add_textbox()"><br>
-                                <!-- java.....String result[] = request.getParameterValues("tbox");
-                                for(int i=0; i<result.length; i++){
-                                System.out.println(result[i]);
-                                } -->
                             </div>
                         </div>
                         <input id="submit" type="submit" value="작성 완료" class="btn btn-outline-dark btn-block btn-lg"><br>

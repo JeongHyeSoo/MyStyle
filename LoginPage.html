@@ -22,8 +22,13 @@
 
     <META NAME="GENERATOR" Content="Microsoft Visual Studio">
 
+
+
     <TITLE>로그인 페이지</TITLE>
+
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
     <link rel="stylesheet" href="css/loginPage_style.css">
+
 </HEAD>
 <BODY>
     <header>
@@ -33,15 +38,25 @@
             </div>
         </div>
     </header>
+
     <article>
-        <div id="LoginPadding" class="container-fluid">
-            <div id="LoginBox">
-                <div align="center" class="{$display_kakao|display}">
-                    <a href="#none" onclick="{$kakao_func_login}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_kakao_login.gif" alt="카카오 로그인" /></a>
-                </div>
-            </div>
+        <div id="naverldLoginMargin">
+        <div id="naverIdLogin" class="container-fluid" align="center">
+        <script type="text/javascript">
+            var naverLogin = new naver.LoginWithNaverId(
+                {
+                    clientId: "eZqcbJvP2wo8KQLadgLB",
+                    callbackUrl: "http://122.45.80.252:8080/navercallback",
+                    isPopup: false,
+                    loginButton: { color: "green", type: 3, height: 60 }
+                }
+            );
+            naverLogin.init();
+        </script>
+        </div>
         </div>
     </article>
+
     <footer>
         <div id="Copyright" align="center" class="container-fluid">
             Copyright@HyeSuhyeon
